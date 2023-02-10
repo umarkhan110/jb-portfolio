@@ -9,25 +9,25 @@ const Social = () => {
   const socialContent = [
     {
       id: 1,
-      link: "https://www.facebook.com/",
+      link: "https://www.facebook.com/antidote.malik",
       icon: <FaFacebookF />,
       iconClass: "text-[#1773EA]",
     },
     {
       id: 2,
-      link: "https://twitter.com/",
+      link: "https://twitter.com/jinnmalik",
       icon: <FaTwitter />,
       iconClass: "text-[#1C9CEA]",
     },
-    {
-      id: 3,
-      link: "https://dribbble.com/",
-      icon: <FaDribbble />,
-      iconClass: "text-[#e14a84]",
-    },
+    // {
+    //   id: 3,
+    //   link: "https://dribbble.com/",
+    //   icon: <FaDribbble />,
+    //   iconClass: "text-[#e14a84]",
+    // },
     {
       id: 4,
-      link: "https://www.linkedin.com/",
+      link: "https://www.linkedin.com/in/jinnmalik/",
       icon: <FaLinkedinIn />,
       iconClass: "text-[#0072b1]",
     },

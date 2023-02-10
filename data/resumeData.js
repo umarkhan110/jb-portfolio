@@ -9,25 +9,25 @@ module.exports = [
     items: [
       {
         id: 1,
-        date: "2021-2023",
-        title: "Ph.D in Horriblensess ",
-        place: "ABC University, Los Angeles, CA",
+        date: "2006-2010",
+        title: "BS. Computer Science",
+        place: "First Nations University of Canada",
         bg: "#FFF4F4",
       },
 
       {
         id: 2,
-        date: "2019 - Present",
-        title: "Sr. Software Tester",
+        date: "Issued 2016",
+        title: "Google Developers Certification",
         place: "Google Inc.",
         bg: "#FFF1FB",
       },
 
       {
         id: 3,
-        date: "2021",
-        title: "Best Developer ",
-        place: "University Of Melbourne, NA",
+        date: "Issued 2020",
+        title: "Mobile Web Specialist",
+        place: "Google Inc.",
         bg: "#FFF4F4",
       },
     ],

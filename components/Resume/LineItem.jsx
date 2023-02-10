@@ -6,26 +6,26 @@ const LineItem = ({ item }) => {
     {
       id: 1,
       color: "#FF6464",
-      name: "Web Design",
+      name: "Full-Stack",
       number: "80",
     },
     {
       id: 2,
       color: "#9272D4",
-      name: "Mobile App ",
-      number: "95",
+      name: "Mobile Development (Flutter)",
+      number: "70",
     },
     {
       id: 3,
       color: "#5185D4",
-      name: "Illustrator",
-      number: "65",
+      name: "Project Management",
+      number: "60",
     },
     {
       id: 4,
       color: "#CA56F2",
-      name: "Photoshope",
-      number: "75",
+      name: "UX/UI Design",
+      number: "70",
     },
   ];
 

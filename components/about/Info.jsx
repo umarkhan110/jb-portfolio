@@ -19,7 +19,8 @@ const Info = () => {
             className="hover:text-[#FA5252] duration-300 transition"
             href="tel:+1234567890"
           >
-            +123 456 7890
+            +1 4376776968
+
           </a>
         </>
       ),
@@ -30,7 +31,7 @@ const Info = () => {
       icon: <FaMapMarkerAlt />,
       iconColor: "text-[#6AB5B9] ",
       name: "Location",
-      meta: <>Hong kong china</>,
+      meta: <>Ontario, Canada</>,
     },
     {
       id: 3,
@@ -45,7 +46,7 @@ const Info = () => {
             className="hover:text-[#FA5252] duration-300 transition"
             href="mailto:ibthemes21@gmail.com"
           >
-            example@mail.com
+            junaidmalikkakayzai@gmail.com
           </a>
         </>
       ),
@@ -55,7 +56,7 @@ const Info = () => {
       icon: <FaCalendarAlt />,
       iconColor: "text-[#C17CEB]",
       name: "Birthday",
-      meta: <>May 27, 1990</>,
+      meta: <>March 12, 1982</>,
     },
   ];
 

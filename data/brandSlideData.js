@@ -21,6 +21,10 @@ module.exports = [
   },
   {
     id: 6,
-    img: "/images/slider/brand-1.png",
+    img: "/images/slider/6.png",
+  },
+  {
+    id: 7,
+    img: "/images/slider/7.png",
   },
 ];
