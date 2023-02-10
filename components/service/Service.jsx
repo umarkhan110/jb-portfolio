@@ -23,7 +23,7 @@ const Service = () => {
             alt="icon"
           />
 
-          <div className="space-y-2 break-all">
+          <div className="space-y-2">
             <h3 className="dark:text-white text-xl font-semibold">
               {item?.title}
             </h3>

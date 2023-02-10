@@ -59,7 +59,7 @@ const Works2 = () => {
   return (
     <>
       {/* Portfilo fillter tab start */}
-      <ul className="mt-[40px] flex w-full justify-start md:justify-end flex-wrap font-medium pb-12">
+      {/* <ul className="mt-[40px] flex w-full justify-start md:justify-end flex-wrap font-medium pb-12">
         <li
           className={`${
             test === "All" ? "text-[#FA5252]" : "fillter-btn "
@@ -98,7 +98,7 @@ const Works2 = () => {
         >
           Graphic Design
         </li>
-      </ul>
+      </ul> */}
       {/* End portfolio filter tab */}
 
       {/* Start portfolio items */}
@@ -158,9 +158,9 @@ const Works2 = () => {
               <div className="space-y-2">
                 <p className="dark:text-white flex items-center text-[15px]  sm:text-lg ">
                   <FiFilePlus className="sm:text-lg hidden sm:block mr-2  md:text-xl" />
-                  Project :&nbsp; <span className="font-medium "> Website</span>
+                  Title :&nbsp; <span className="font-medium "> {singleData.title}</span>
                 </p>
-                <p className="dark:text-white flex items-center text-[15px]  sm:text-lg ">
+                <p className="dark:text-white flex flex-wrap items-center text-[15px]  sm:text-lg ">
                   <FiCode className="text-lg mr-2 hidden sm:block " />
                   Langages :&nbsp;
                   <span className="font-medium ">{singleData?.langages}</span>
@@ -190,9 +190,9 @@ const Works2 = () => {
               </div>
             </div>
 
-            <p className="dark:text-white  text-2line font-normal text-[15px] sm:text-sm  ">
+            {/* <p className="dark:text-white  text-2line font-normal text-[15px] sm:text-sm  ">
               {singleData?.description}
-            </p>
+            </p> */}
 
             <Image
               className="w-full md:h-[450px]  h-auto object-cover rounded-xl mt-6"
