@@ -19,7 +19,7 @@ const LineItem = ({ item }) => {
       id: 3,
       color: "#5185D4",
       name: "Project Management",
-      number: "60",
+      number: "70",
     },
     {
       id: 4,

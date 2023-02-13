@@ -8,6 +8,12 @@ import {
 const Social = () => {
   const socialContent = [
     {
+      id: 4,
+      link: "https://www.linkedin.com/in/jinnmalik/",
+      icon: <FaLinkedinIn />,
+      iconClass: "text-[#0072b1]",
+    },
+    {
       id: 1,
       link: "https://www.facebook.com/antidote.malik",
       icon: <FaFacebookF />,
@@ -25,12 +31,7 @@ const Social = () => {
     //   icon: <FaDribbble />,
     //   iconClass: "text-[#e14a84]",
     // },
-    {
-      id: 4,
-      link: "https://www.linkedin.com/in/jinnmalik/",
-      icon: <FaLinkedinIn />,
-      iconClass: "text-[#0072b1]",
-    },
+    
   ];
 
   return (

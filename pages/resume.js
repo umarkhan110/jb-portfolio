@@ -62,7 +62,7 @@ const index = () => {
               </div>
               {/* End Skills */}
 
-              <Footer />
+              {/* <Footer /> */}
               {/* Common Footer call here */}
             </div>
             {/* End fade */}

@@ -39,25 +39,25 @@ module.exports = [
     items: [
       {
         id: 1,
-        date: "2017-2021",
-        title: "Computer Science",
-        place: "Imperialize Technical Institute",
+        date: "2021 - Present",
+        title: "FullStack Developer",
+        place: "Integry",
         bg: "#EEF5FA",
       },
 
       {
         id: 2,
-        date: "2015-2017",
-        title: "Cr. Web Developer",
-        place: "ib-themes ltd.",
+        date: "2019-2021",
+        title: "Engineering Lead",
+        place: "Jinnbyte Private Limited",
         bg: "#F2F4FF",
       },
 
       {
         id: 3,
-        date: "2008",
-        title: "Best Writter",
-        place: "Online Typodev Soluation Ltd.",
+        date: "2017-2019",
+        title: "FullStack Developer  ",
+        place: "Norgic AB",
         bg: "#EEF5FA",
       },
     ],

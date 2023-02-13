@@ -156,11 +156,11 @@ const Works2 = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 my-6">
               <div className="space-y-2">
-                <p className="dark:text-white flex items-center text-[15px]  sm:text-lg ">
+                <p className="dark:text-white flex items-center text-[15px]  sm:text-lg font-bold">
                   <FiFilePlus className="sm:text-lg hidden sm:block mr-2  md:text-xl" />
                   Title :&nbsp; <span className="font-medium "> {singleData.title}</span>
                 </p>
-                <p className="dark:text-white flex flex-wrap items-center text-[15px]  sm:text-lg ">
+                <p className="dark:text-white flex flex-wrap items-center text-[15px]  sm:text-lg font-bold">
                   <FiCode className="text-lg mr-2 hidden sm:block " />
                   Langages :&nbsp;
                   <span className="font-medium ">{singleData?.langages}</span>
@@ -168,13 +168,13 @@ const Works2 = () => {
               </div>
 
               <div className="space-y-2">
-                <p className="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px]  sm:text-lg ">
+                <p className="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px]  sm:text-lg font-bold">
                   <FiUser className="text-lg mr-2 hidden sm:block" />
                   Client :&nbsp;
                   <span className="font-medium ">{singleData?.client}</span>
                 </p>
 
-                <p className="dark:text-white flex items-center text-[15px] sm:text-lg ">
+                <p className="dark:text-white flex flex-wrap items-center text-[15px] sm:text-lg font-bold">
                   <FiExternalLink className="text-lg mr-2 hidden sm:block" />
                   Preview :&nbsp;
                   <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060] ">

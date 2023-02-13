@@ -44,7 +44,7 @@ const index = () => {
               {/* End Portfolio */}
             </div>
             {/* End fade */}
-            <Footer />
+            {/* <Footer /> */}
             {/* Common Footer call here */}
           </div>
           {/* End common-wrap */}

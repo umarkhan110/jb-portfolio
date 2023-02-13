@@ -35,7 +35,7 @@ const index = () => {
               </div>
               {/* End Portfolio */}
 
-              <Footer />
+              {/* <Footer /> */}
               {/* Common Footer call here */}
             </div>
             {/* End fade */}

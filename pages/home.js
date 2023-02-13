@@ -51,7 +51,7 @@ const index = () => {
               </section>
               {/* client info end */}
 
-              <Footer />
+              {/* <Footer /> */}
               {/* Common Footer call here */}
             </div>
             {/* End fade */}
