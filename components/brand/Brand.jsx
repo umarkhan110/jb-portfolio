@@ -62,7 +62,7 @@ const Brand = () => {
       
       <Slider {...settings} arrows={false}>
         {brandSlideLight.map((item) => (
-          <Image
+          <img
             key={item.id}
             className=" overflow-hidden brand-img"
             src={item.img}

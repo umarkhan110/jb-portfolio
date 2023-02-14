@@ -5,7 +5,7 @@ module.exports = [
   },
   {
     id: 2,
-    img: "/images/slider/Dark logos/2.png",
+    img: "/images/slider/Light logos/2.png",
   },
   {
     id: 3,
