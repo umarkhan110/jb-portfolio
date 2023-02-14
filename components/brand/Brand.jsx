@@ -58,10 +58,10 @@ const Brand = () => {
 
   return (
     <div className="overflow-hidden">
-      {theme === "dark" ? 
+      {theme !== "dark" ? 
       
       <Slider {...settings} arrows={false}>
-        {brandSlideDark.map((item) => (
+        {brandSlideLight.map((item) => (
           <Image
             key={item.id}
             className=" overflow-hidden brand-img"
@@ -73,7 +73,7 @@ const Brand = () => {
         ))}
       </Slider>: 
       <Slider {...settings} arrows={false}>
-      {brandSlideLight.map((item) => (
+      {brandSlideDark.map((item) => (
         <Image
           key={item.id}
           className=" overflow-hidden brand-img"
