@@ -1,13 +1,10 @@
 import Image from "next/image";
 import Slider from "react-slick";
-import brandSlideDark from "../../data/brandSlideData";
-import brandSlideLight from "../../data/brandSlideDataLight";
-import { useTheme } from "next-themes";
-brandSlideDark;
-brandSlideLight;
+import brandSlideData from "../../data/brandSlideData";
+
+brandSlideData;
 
 const Brand = () => {
-  const { theme, setTheme } = useTheme();
   const settings = {
     dots: false,
     infinite: true,
@@ -59,7 +56,7 @@ const Brand = () => {
   return (
     <div className="overflow-hidden">
       <Slider {...settings} arrows={false}>
-        {theme === "dark" ? brandSlideDark : brandSlideLight.map((item) => (
+        {brandSlideData.map((item) => (
           <Image
             key={item.id}
             className=" overflow-hidden brand-img"
