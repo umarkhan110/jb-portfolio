@@ -1,31 +1,31 @@
 module.exports = [
   {
     id: 1,
-    img: "/images/slider/Dark logos/1.png",
+    img: "/images/slider/Darklogos/1.png",
   },
   {
     id: 2,
-    img: "/images/slider/Light logos/2.png",
+    img: "/images/slider/Darklogos/2.png",
   },
   {
     id: 3,
-    img: "/images/slider/Dark logos/3.png",
+    img: "/images/slider/Darklogos/3.png",
   },
   {
     id: 4,
-    img: "/images/slider/Dark logos/4.png",
+    img: "/images/slider/Darklogos/4.png",
   },
   {
     id: 5,
-    img: "/images/slider/Dark logos/5.png",
+    img: "/images/slider/Darklogos/5.png",
   },
   {
     id: 6,
-    img: "/images/slider/Dark logos/6.png",
+    img: "/images/slider/Darklogos/6.png",
   },
   {
     id: 7,
-    img: "/images/slider/Dark logos/7.png",
+    img: "/images/slider/Darklogos/7.png",
   },
  
 ];
