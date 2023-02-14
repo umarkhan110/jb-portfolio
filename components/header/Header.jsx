@@ -19,7 +19,7 @@ const Header = () => {
 
         <Link href="/">
           <Image
-            className="h-[26px] lg:h-[32px]"
+            // className="h-[26px] lg:h-[32px]"
             width={153}
             height={26}
             priority

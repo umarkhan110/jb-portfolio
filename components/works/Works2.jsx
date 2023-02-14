@@ -168,7 +168,7 @@ const Works2 = () => {
               </div>
 
               <div className="space-y-2">
-                <p className="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px]  sm:text-lg font-medium">
+                <p className="dark:text-white flex flex-wrap items-center mt-2 lg:mt-0 text-[15px]  sm:text-lg font-medium">
                   <FiUser className="text-lg mr-2 hidden sm:block" />
                   Client :&nbsp;
                   <span className="font-light">{singleData?.client}</span>

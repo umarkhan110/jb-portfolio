@@ -27,7 +27,7 @@ const index = () => {
           <div className="lg:rounded-2xl bg-white dark:bg-[#111111]">
             <div data-aos="fade">
               <div className="container mb-8  px-4 sm:px-5 md:px-10 lg:px-[60px]">
-                <div className="pt-12">
+                <div className="pt-12 pb-6">
                   <h2 className="after-effect after:left-48 mt-12  lg:mt-0 mb-12 md:mb-[30px]">
                     Contact
                   </h2>

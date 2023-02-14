@@ -26,7 +26,7 @@ const index = () => {
         <div className="col-span-12 lg:col-span-8 ">
           <HeaderNavigation />
 
-          <div className="lg:rounded-2xl bg-white dark:bg-[#111111]">
+          <div className="lg:rounded-2xl bg-white dark:bg-[#111111] pb-6">
             <div data-aos="fade">
               <Intro />
               {/* End about descriptions */}
