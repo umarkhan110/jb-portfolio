@@ -5,18 +5,26 @@ module.exports = [
     },
     {
       id: 2,
-      img: "/images/slider/Light logos/3.png",
+      img: "/images/slider/Light logos/2.png",
     },
     {
       id: 3,
-      img: "/images/slider/Light logos/5.png",
+      img: "/images/slider/Light logos/3.png",
     },
     {
       id: 4,
-      img: "/images/slider/Light logos/6.png",
+      img: "/images/slider/Light logos/4.png",
     },
     {
       id: 5,
+      img: "/images/slider/Light logos/5.png",
+    },
+    {
+      id: 6,
+      img: "/images/slider/Light logos/6.png",
+    },
+    {
+      id: 7,
       img: "/images/slider/Light logos/7.png",
     },
    

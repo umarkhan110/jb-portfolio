@@ -26,7 +26,7 @@ const AddressTwo = () => {
           </span>
           <div className="space-y-2">
             <p className="text-xl font-semibold dark:text-white">
-              {item?.title} :
+              {/* {item?.title} : */}
             </p>
             {item?.info}
           </div>
