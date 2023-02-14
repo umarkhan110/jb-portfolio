@@ -156,28 +156,28 @@ const Works2 = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 my-6">
               <div className="space-y-2">
-                <p className="dark:text-white flex items-center text-[15px]  sm:text-lg font-bold">
+                <p className="dark:text-white flex items-center text-[15px]  sm:text-lg font-medium">
                   <FiFilePlus className="sm:text-lg hidden sm:block mr-2  md:text-xl" />
-                  Title :&nbsp; <span className="font-medium "> {singleData.title}</span>
+                  Title :&nbsp; <span className="font-light"> {singleData.title}</span>
                 </p>
-                <p className="dark:text-white flex flex-wrap items-center text-[15px]  sm:text-lg font-bold">
+                <p className="dark:text-white flex flex-wrap items-center text-[15px]  sm:text-lg font-medium">
                   <FiCode className="text-lg mr-2 hidden sm:block " />
                   Langages :&nbsp;
-                  <span className="font-medium ">{singleData?.langages}</span>
+                  <span className="font-light">{singleData?.langages}</span>
                 </p>
               </div>
 
               <div className="space-y-2">
-                <p className="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px]  sm:text-lg font-bold">
+                <p className="dark:text-white flex items-center mt-2 lg:mt-0 text-[15px]  sm:text-lg font-medium">
                   <FiUser className="text-lg mr-2 hidden sm:block" />
                   Client :&nbsp;
-                  <span className="font-medium ">{singleData?.client}</span>
+                  <span className="font-light">{singleData?.client}</span>
                 </p>
 
-                <p className="dark:text-white flex flex-wrap items-center text-[15px] sm:text-lg font-bold">
+                <p className="dark:text-white flex flex-wrap items-center text-[15px] sm:text-lg font-medium">
                   <FiExternalLink className="text-lg mr-2 hidden sm:block" />
                   Preview :&nbsp;
-                  <span className="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060] ">
+                  <span className="font-light transition-all duration-300 ease-in-out hover:text-[#ef4060] ">
                     <a
                       href={singleData?.link}
                       target="_blank"

@@ -23,7 +23,7 @@ const Header = () => {
             width={153}
             height={26}
             priority
-            src="/images/logo/logo.png"
+            src="/images/logo/junaid logo.png"
             alt="logo"
           />
         </Link>

@@ -43,7 +43,7 @@ const Info = () => {
         <>
           {" "}
           <a
-            className="hover:text-[#FA5252] duration-300 transition whitespace-nowrap"
+            className="hover:text-[#FA5252] duration-300 transition md:whitespace-nowrap"
             href="mailto:ibthemes21@gmail.com"
           >
             junaidmalikkakayzai@gmail.com
