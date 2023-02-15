@@ -8,7 +8,9 @@ import Service from "../components/service/Service";
 import Brand from "../components/brand/Brand";
 import Footer from "../components/footer/Footer";
 
-const index = () => {
+const index = ({
+  sidebarData,
+}) => {
   return (
     <section className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed dark:bg-homeTwoBg-dark  md:pb-16 w-full">
       <Seo pageTitle="Home" />
@@ -19,7 +21,7 @@ const index = () => {
 
       <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
         <div className="col-span-12 lg:col-span-4  lg:h-screen lg:sticky top-44">
-          <SidebarInfo />
+          <SidebarInfo data={sidebarData} />
         </div>
         {/* profile sidebar */}
 
