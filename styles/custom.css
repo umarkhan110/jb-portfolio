@@ -158,3 +158,25 @@ input:-webkit-autofill:focus {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /* @media only screen and (min-width: 1200px) {...} */
+
+
+.evenOdd:nth-child(3n+1){
+    background-color: #FCF4FF;
+    
+}
+.evenOdd:nth-child(3n+2){
+    background-color: #FEFAF0;
+}
+.evenOdd:nth-child(3n+3){
+    background-color: #F3FAFF;
+}
+.evenOdd1:nth-child(3n+1) .rc-progress-line-path{
+    stroke: #FF6464;
+    
+}
+.evenOdd1:nth-child(3n+2) .rc-progress-line-path{
+    stroke: #9272D4;
+}
+.evenOdd1:nth-child(3n+3) .rc-progress-line-path{
+    stroke: #5185D4;
+}

@@ -1,7 +1,7 @@
 import { Line } from "rc-progress";
 import React from "react";
 
-const LineItem = ({ item }) => {
+const LineItem = ({ data }) => {
   const lineArray = [
     {
       id: 1,
@@ -31,23 +31,23 @@ const LineItem = ({ item }) => {
 
   return (
     <>
-      {lineArray.map((item) => (
-        <div className=" mb-7" key={item.id}>
+      {data.data.map((item) => (
+        <div className=" mb-7 evenOdd1" key={item.id}>
           <div className="flex justify-between py-1">
             <span className=" text-base text-gray-lite font-semibold dark:text-[#A6A6A6]">
-              {item?.name}
+            {item.attributes.Skill_Name}
             </span>
             <span className=" text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]">
-              {item?.number}%
+              {item.attributes.Percentage}%
             </span>
           </div>
 
           <Line
-            percent={item?.number}
+            percent={item.attributes.Percentage}
             strokeWidth={1}
             trailWidth={1}
             // trailColor={`${local === "dark" ? "#1C1C1C" : "#EDF2F2"}`}
-            strokeColor={item?.color}
+            strokeColor="evenOdd1"
           />
         </div>
       ))}

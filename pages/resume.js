@@ -10,9 +10,9 @@ import Seo from "../components/seo/Seo";
 
 const index = ({
   sidebarData,
-  // skillData,
-  // resumeData,
-  // knowldegeData,
+  skillData,
+  resumeData,
+  knowldegeData,
 }) => {
   return (
     <section className="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
@@ -37,7 +37,7 @@ const index = ({
                   {/*Resume page title */}
                   <h2 className="after-effect after:left-44">Resume</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6 mt-[30px]">
-                    <ResumeCardTwo />
+                    <ResumeCardTwo data={resumeData}/>
                     {/* resume items map */}
                   </div>
                 </div>
@@ -50,7 +50,7 @@ const index = ({
                     <h4 className="text-5xl dark:text-white font-medium mb-6">
                       Working Skills
                     </h4>
-                    <LineItem />
+                    <LineItem data={skillData}  />
                     {/* experience percent items */}
                   </div>
                   <div className="col-span-1">
@@ -59,7 +59,7 @@ const index = ({
                     </h4>
 
                     <div className="flex gap-x-3 gap-y-3 md:gap-y-3 md:gap-x-3 flex-wrap">
-                      <Tag />
+                      <Tag data={knowldegeData}/>
                     </div>
                     {/* Knowledges items */}
                   </div>
@@ -89,20 +89,20 @@ export async function getStaticProps() {
   // const domain = "https://www.hautelogic.net";
   const res = await fetch(`${url}/api/home-page?populate=*`);
   const sidebarData = await res.json();
-  // const resResumesData = await fetch(`${url}/api/resumes?populate=*`);
-  // const resumeData = await resResumesData.json();
-  // const resSkillData = await fetch(`${url}/api/skills?populate=*`);
-  // const skillData = await resSkillData.json();
-  // const resknowldegesData = await fetch(`${url}/api/knowldeges?populate=*`);
-  // const knowldegeData = await resknowldegesData.json();
+  const resResumesData = await fetch(`${url}/api/resumes?populate=*`);
+  const resumeData = await resResumesData.json();
+  const resSkillData = await fetch(`${url}/api/skills?populate=*`);
+  const skillData = await resSkillData.json();
+  const resknowldegesData = await fetch(`${url}/api/knowldeges?populate=*`);
+  const knowldegeData = await resknowldegesData.json();
 
   // Pass data to the page via props
   return {
     props: {
       sidebarData,
-      // skillData,
-      // resumeData,
-      // knowldegeData,  
+      skillData,
+      resumeData,
+      knowldegeData,  
     },
    
   };

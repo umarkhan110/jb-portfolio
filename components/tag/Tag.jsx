@@ -1,4 +1,4 @@
-const Tag = () => {
+const Tag = ({data}) => {
   const tagList = [
     
     "MERN Stack",
@@ -11,11 +11,12 @@ const Tag = () => {
 "Project Management",
 
   ];
+  
   return (
     <>
-      {tagList.map((tag, i) => (
+      {data.data.map((tag, i) => (
         <button className="resume-btn text-[15px]" key={i}>
-          {tag}
+         {tag.attributes.Knowldege}
         </button>
       ))}
     </>
