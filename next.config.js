@@ -7,7 +7,7 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'strapibucketforjunaidmalikportfolio.s3.amazonaws.com',
         port: '',
-        
+        pathname: '/**'
       },
     ],
   },
