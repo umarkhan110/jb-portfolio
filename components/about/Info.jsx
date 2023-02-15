@@ -51,13 +51,13 @@ const Info = () => {
         </>
       ),
     },
-    {
-      id: 4,
-      icon: <FaCalendarAlt />,
-      iconColor: "text-[#C17CEB]",
-      name: "Birthday",
-      meta: <>March 12, 1982</>,
-    },
+    // {
+    //   id: 4,
+    //   icon: <FaCalendarAlt />,
+    //   iconColor: "text-[#C17CEB]",
+    //   name: "Birthday",
+    //   meta: <>March 12, 1982</>,
+    // },
   ];
 
   return (

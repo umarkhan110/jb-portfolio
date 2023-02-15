@@ -25,7 +25,7 @@ export default function App({ Component, pageProps }) {
         pauseOnHover
       />
 
-      <ThemeProvider attribute="class">
+      <ThemeProvider attribute="class" defaultTheme="dark">
         <Component {...pageProps} />
       </ThemeProvider>
     </>

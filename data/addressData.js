@@ -7,10 +7,10 @@ module.exports = [
       <>
         <p>
           <a
-            href="tel:+452 666 386"
+            href="tel:+1 4376776968"
             className="text-gray-lite text-lg dark:text-[#A6A6A6] "
           >
-            +1 4376776968
+            +14376776968
           </a>
         </p>
 
@@ -27,7 +27,7 @@ module.exports = [
       <>
         <p>
           <a
-            href="mailto:ibthemes21@gmail.com"
+            href="junaidmalikkakayzai@gmail.com"
             className="text-gray-lite text-lg dark:text-[#A6A6A6] "
           >
             junaidmalikkakayzai@gmail.com

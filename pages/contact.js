@@ -32,7 +32,7 @@ const index = () => {
                     Contact
                   </h2>
                   {/* End contact address block */}
-                  <div className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mb-[40px] grid gap-x-5 gap-y-7">
+                  <div className="grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 mb-[40px] grid gap-x-5 gap-y-7">
                     <AddressTwo />
                   </div>
                   {/* End contact address block */}

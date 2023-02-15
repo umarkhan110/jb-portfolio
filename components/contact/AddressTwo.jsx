@@ -13,7 +13,7 @@ const AddressTwo = () => {
           style={{
             background: `${theme === "dark" ? "#212425" : item?.bg}`,
           }}
-          className="flex flex-wrap dark:bg-transparent p-[30px]  border-[#A6A6A6] gap-2 rounded-xl "
+          className={`flex flex-wrap md:flex-nowrap lg:flex-wrap dark:bg-transparent p-[30px]  border-[#A6A6A6] gap-2 rounded-xl ${item.id === "02"? "md:col-span-2": "col-span-1"}`}
         >
           <span className="w-8 mt-2">
             <Image
