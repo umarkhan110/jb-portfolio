@@ -6,7 +6,9 @@ import Footer from "../components/footer/Footer";
 import Works2 from "../components/works/Works2";
 import Seo from "../components/seo/Seo";
 
-const index = () => {
+const index = ({
+  sidebarData
+}) => {
   return (
     <section className="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
       <Seo pageTitle="Works" />
@@ -18,7 +20,7 @@ const index = () => {
       <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
         <div className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
           {/* profile sidebar */}
-          <SidebarInfo />
+          <SidebarInfo data={sidebarData}/>
         </div>
         <div className="col-span-12 lg:col-span-8">
           <HeaderNavigation />
@@ -49,3 +51,29 @@ const index = () => {
 };
 
 export default dynamic(() => Promise.resolve(index), { ssr: false });
+
+export async function getStaticProps() {
+  
+  // Fetch data from external API
+  const url = "http://localhost:1337";
+  // const domain = "https://www.hautelogic.net";
+  const res = await fetch(`${url}/api/home-page?populate=*`);
+  const sidebarData = await res.json();
+  // const resResumesData = await fetch(`${url}/api/resumes?populate=*`);
+  // const resumeData = await resResumesData.json();
+  // const resSkillData = await fetch(`${url}/api/skills?populate=*`);
+  // const skillData = await resSkillData.json();
+  // const resknowldegesData = await fetch(`${url}/api/knowldeges?populate=*`);
+  // const knowldegeData = await resknowldegesData.json();
+
+  // Pass data to the page via props
+  return {
+    props: {
+      sidebarData,
+      // skillData,
+      // resumeData,
+      // knowldegeData,  
+    },
+   
+  };
+}
