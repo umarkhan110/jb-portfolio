@@ -10,10 +10,10 @@ const Service = ({data}) => {
     <>
       {data.data.map((item) => (
         <div
-          className="about-box dark:bg-transparent"
+          className="about-box dark:bg-transparent evenOdd"
           key={item.id}
           style={{
-            background: `${theme === "dark" ? "transparent" : item?.bg}`,
+            background: `${theme === "dark" ? "transparent" : "evenOdd"}`,
           }}
         >
           <Image

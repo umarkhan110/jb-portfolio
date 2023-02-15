@@ -9,6 +9,7 @@ import Seo from "../components/seo/Seo";
 
 const index = ({
   sidebarData,
+  contactData
 }) => {
   return (
     <section className="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full">
@@ -35,7 +36,7 @@ const index = ({
                   </h2>
                   {/* End contact address block */}
                   <div className="grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 mb-[40px] grid gap-x-5 gap-y-7">
-                    <AddressTwo />
+                    <AddressTwo  data={contactData}/>
                   </div>
                   {/* End contact address block */}
 
@@ -66,20 +67,15 @@ export async function getStaticProps() {
   // const domain = "https://www.hautelogic.net";
   const res = await fetch(`${url}/api/home-page?populate=*`);
   const sidebarData = await res.json();
-  // const resResumesData = await fetch(`${url}/api/resumes?populate=*`);
-  // const resumeData = await resResumesData.json();
-  // const resSkillData = await fetch(`${url}/api/skills?populate=*`);
-  // const skillData = await resSkillData.json();
-  // const resknowldegesData = await fetch(`${url}/api/knowldeges?populate=*`);
-  // const knowldegeData = await resknowldegesData.json();
+  const resContactData = await fetch(`${url}/api/contact?populate=*`);
+  const contactData = await resContactData.json();
+  
 
   // Pass data to the page via props
   return {
     props: {
       sidebarData,
-      // skillData,
-      // resumeData,
-      // knowldegeData,  
+      contactData, 
     },
    
   };

@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 
 Modal.setAppElement("#__next");
 
-const Works2 = () => {
+const Works2 = ({data}) => {
   const breakpointColumnsObj = {
     default: 2,
     1100: 2,
@@ -22,7 +22,7 @@ const Works2 = () => {
   const { theme, setTheme } = useTheme();
 
   const handlePortfolioData = (id) => {
-    const find = portfolioData.find((item) => item?.id === id);
+    const find = data.data.find((item) => item?.id === id);
     setSingleData(find);
     setIsOpen(true);
   };
@@ -44,15 +44,15 @@ const Works2 = () => {
     handleData("All");
   }, []);
 
-  const [data, setData] = useState(portfolioData);
+  // const [data, setData] = useState(portfolioData);
 
   // fillter portfilo data
   const handleData = (text) => {
     if (text === "All") {
-      setData(portfolioData);
+      // setData(portfolioData);
     } else {
-      const findData = portfolioData.filter((item) => item.tag === text);
-      setData(findData);
+      const findData = data.data.filter((item) => item.attributes.Industry=== text);
+      // setData(findData);
     }
   };
 
@@ -107,11 +107,11 @@ const Works2 = () => {
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {data.map((item) => (
+        {data.data.map((item) => (
           <div
-            className="rounded-lg p-6 dark:border-[2px] border-[#212425]"
+            className="rounded-lg p-6 dark:border-[2px] border-[#212425] evenOdd"
             style={{
-              background: `${theme === "dark" ? "transparent" : item?.bg}`,
+              background: `${theme === "dark" ? "transparent" : "evenOdd"}`,
             }}
             key={item.id}
             onClick={() => handleModle(item?.id)}
@@ -119,7 +119,7 @@ const Works2 = () => {
             <div className="overflow-hidden rounded-lg">
               <Image
                 className="w-full    cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg h-auto "
-                src={item.imgSmall}
+                src={item.attributes.smallImage.data.attributes.url}
                 width={300}
                 height={300}
                 priority
@@ -127,10 +127,10 @@ const Works2 = () => {
               />
             </div>
             <span className="pt-5 text-[14px] font-normal text-gray-lite block dark:text-[#A6A6A6]">
-              {item.tag}
+            {item.attributes.Industry}
             </span>
             <h2 className="font-medium cursor-pointer text-xl duration-300 transition hover:text-[#FA5252] dark:hover:text-[#FA5252] dark:text-white mt-2">
-              {item.title}
+            {item.attributes.title}
             </h2>
           </div>
         ))}
@@ -138,6 +138,7 @@ const Works2 = () => {
       {/* End portfolio items */}
 
       {/* Start Modal for portfolio items */}
+      {isOpen === true?
       <Modal
         isOpen={isOpen}
         onRequestClose={() => setIsOpen(false)}
@@ -151,19 +152,19 @@ const Works2 = () => {
               className="text-7xl cursor-pointer  absolute right-2 -top-12 md:-right-10 md:-top-6 z-50  text-white transition transform hover:rotate-45 duration-300 ease-in-out "
             />
             <h2 className="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold">
-              {singleData.tag} Project
+            {singleData.attributes.Industry} Project
             </h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 my-6">
               <div className="space-y-2">
                 <p className="dark:text-white flex items-center text-[15px]  sm:text-lg font-medium">
                   <FiFilePlus className="sm:text-lg hidden sm:block mr-2  md:text-xl" />
-                  Title :&nbsp; <span className="font-light"> {singleData.title}</span>
+                  Title :&nbsp; <span className="font-light">{singleData.attributes.title}</span>
                 </p>
                 <p className="dark:text-white flex flex-wrap items-center text-[15px]  sm:text-lg font-medium">
                   <FiCode className="text-lg mr-2 hidden sm:block " />
                   Langages :&nbsp;
-                  <span className="font-light">{singleData?.langages}</span>
+                  <span className="font-light">{singleData?.attributes.languages}</span>
                 </p>
               </div>
 
@@ -171,7 +172,7 @@ const Works2 = () => {
                 <p className="dark:text-white flex flex-wrap items-center mt-2 lg:mt-0 text-[15px]  sm:text-lg font-medium">
                   <FiUser className="text-lg mr-2 hidden sm:block" />
                   Client :&nbsp;
-                  <span className="font-light">{singleData?.client}</span>
+                  <span className="font-light">{singleData.attributes.client}</span>
                 </p>
 
                 <p className="dark:text-white flex flex-wrap items-center text-[15px] sm:text-lg font-medium">
@@ -179,11 +180,11 @@ const Works2 = () => {
                   Preview :&nbsp;
                   <span className="font-light transition-all duration-300 ease-in-out hover:text-[#ef4060] ">
                     <a
-                      href={singleData?.link}
+                      href={singleData.attributes.link}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {singleData?.linkText}
+                      {singleData.attributes.linkText}
                     </a>
                   </span>
                 </p>
@@ -196,7 +197,7 @@ const Works2 = () => {
 
             <Image
               className="w-full md:h-[450px]  h-auto object-cover rounded-xl mt-6"
-              src={singleData?.img}
+              src={singleData.attributes.largeImage.data.attributes.url}
               alt="blog details image"
               width={620}
               height={420}
@@ -204,7 +205,7 @@ const Works2 = () => {
             />
           </div>
         </div>
-      </Modal>
+      </Modal>:""}
       {/* End Modal for portfolio items */}
     </>
   );

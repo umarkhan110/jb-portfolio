@@ -7,7 +7,8 @@ import Works2 from "../components/works/Works2";
 import Seo from "../components/seo/Seo";
 
 const index = ({
-  sidebarData
+  sidebarData,
+  workData, 
 }) => {
   return (
     <section className="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
@@ -32,7 +33,7 @@ const index = ({
                   <h2 className="after-effect  after:left-48 mt-12  lg:mt-0">
                     Portfolio
                   </h2>
-                  <Works2 />
+                  <Works2 data={workData}/>
                 </div>
               </div>
               {/* End Portfolio */}
@@ -59,20 +60,14 @@ export async function getStaticProps() {
   // const domain = "https://www.hautelogic.net";
   const res = await fetch(`${url}/api/home-page?populate=*`);
   const sidebarData = await res.json();
-  // const resResumesData = await fetch(`${url}/api/resumes?populate=*`);
-  // const resumeData = await resResumesData.json();
-  // const resSkillData = await fetch(`${url}/api/skills?populate=*`);
-  // const skillData = await resSkillData.json();
-  // const resknowldegesData = await fetch(`${url}/api/knowldeges?populate=*`);
-  // const knowldegeData = await resknowldegesData.json();
+  const resWorksData = await fetch(`${url}/api/works?populate=*`);
+  const workData = await resWorksData.json();
 
   // Pass data to the page via props
   return {
     props: {
       sidebarData,
-      // skillData,
-      // resumeData,
-      // knowldegeData,  
+      workData,  
     },
    
   };
