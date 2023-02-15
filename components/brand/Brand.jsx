@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 brandSlideDark;
 brandSlideLight;
 
-const Brand = () => {
+const Brand = ({data}) => {
   const { theme, setTheme } = useTheme();
   const settings = {
     dots: false,
@@ -61,11 +61,11 @@ const Brand = () => {
       {theme !== "dark" ? 
       
       <Slider {...settings} arrows={false}>
-        {brandSlideLight.map((item) => (
-          <img
+        {data.data[1].attributes.Brand_Image.data.map((item) => (
+          <Image
             key={item.id}
             className=" overflow-hidden brand-img"
-            src={item.img}
+            src={item.attributes.url}
             width={150}
             height={50}
             alt="brand"
@@ -73,11 +73,11 @@ const Brand = () => {
         ))}
       </Slider>: 
       <Slider {...settings} arrows={false}>
-      {brandSlideDark.map((item) => (
+      {data.data[0].attributes.Brand_Image.data.map((item) => (
         <Image
           key={item.id}
           className=" overflow-hidden brand-img"
-          src={item.img}
+          src={item.attributes.url}
           width={150}
           height={50}
           alt="brand"

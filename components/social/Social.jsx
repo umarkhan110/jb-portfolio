@@ -5,23 +5,23 @@ import {
   FaTwitter,
 } from "react-icons/fa";
 
-const Social = () => {
+const Social = ({props}) => {
   const socialContent = [
     {
-      id: 4,
-      link: "https://www.linkedin.com/in/jinnmalik/",
+      id: 1,
+      link: `${props.data.attributes.Linkedin_Link}`,
       icon: <FaLinkedinIn />,
       iconClass: "text-[#0072b1]",
     },
     {
-      id: 1,
-      link: "https://www.facebook.com/antidote.malik",
+      id: 2,
+      link: `${props.data.attributes.Facebook_Link}`,
       icon: <FaFacebookF />,
       iconClass: "text-[#1773EA]",
     },
     {
-      id: 2,
-      link: "https://twitter.com/jinnmalik",
+      id: 3,
+      link: `${props.data.attributes.Twitter_Link}`,
       icon: <FaTwitter />,
       iconClass: "text-[#1C9CEA]",
     },

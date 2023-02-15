@@ -25,12 +25,12 @@ const SidebarInfo = ({data}) => {
         {/* Social Links */}
 
         <div className="flex justify-center space-x-3">
-          <Social />
+          <Social props={data} />
         </div>
 
         {/* personal information */}
         <div className="p-7 rounded-2xl mt-7  bg-[#F3F6F6] dark:bg-[#1D1D1D]">
-          <Info />
+          <Info props={data} />
         </div>
 
         <a

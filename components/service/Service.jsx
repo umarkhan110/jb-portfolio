@@ -1,13 +1,14 @@
+// import { data } from "autoprefixer";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import serviceData from "../../data/serviceData";
 
-const Service = () => {
+const Service = ({data}) => {
   const { theme, setTheme } = useTheme();
-
+// console.log(data)
   return (
     <>
-      {serviceData.map((item) => (
+      {data.data.map((item) => (
         <div
           className="about-box dark:bg-transparent"
           key={item.id}
@@ -17,7 +18,7 @@ const Service = () => {
         >
           <Image
             className="w-10 h-10 object-contain  block"
-            src={item.icon}
+            src={`/images/icons/icon-${item.id}.svg`}
             width={40}
             height={40}
             alt="icon"
@@ -25,10 +26,10 @@ const Service = () => {
 
           <div className="space-y-2">
             <h3 className="dark:text-white text-xl font-semibold">
-              {item?.title}
+            {item.attributes.Title}
             </h3>
             <p className=" leading-8 text-gray-lite dark:text-[#A6A6A6]">
-              {item?.des}
+            {item.attributes.Description}
             </p>
           </div>
         </div>

@@ -10,7 +10,11 @@ import Footer from "../components/footer/Footer";
 
 const index = ({
   sidebarData,
+  aboutData,
+  clientData,
+  serviceData,
 }) => {
+  // console.log(serviceData)
   return (
     <section className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed dark:bg-homeTwoBg-dark  md:pb-16 w-full">
       <Seo pageTitle="Home" />
@@ -30,7 +34,7 @@ const index = ({
 
           <div className="lg:rounded-2xl bg-white dark:bg-[#111111] pb-6">
             <div data-aos="fade">
-              <Intro />
+              <Intro data={aboutData} />
               {/* End about descriptions */}
 
               <section className="pb-12 px-2 sm:px-5 md:px-10 lg:px-14 ">
@@ -38,7 +42,7 @@ const index = ({
                   What I do!
                 </h3>
                 <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2 ">
-                  <Service />
+                  <Service data={serviceData}/>
                 </div>
               </section>
               {/* service provide end */}
@@ -48,7 +52,7 @@ const index = ({
                   My Client!
                 </h3>
                 <div className="bg-[#F8FBFB] dark:bg-[#0D0D0D] max-w-full h-auto   py-10 rounded-xl">
-                  <Brand />
+                  <Brand data={clientData}/>
                 </div>
               </section>
               {/* client info end */}

@@ -5,7 +5,7 @@ import {
   FaMobileAlt,
 } from "react-icons/fa";
 
-const Info = () => {
+const Info = ({props}) => {
   const personalContent = [
     {
       id: 1,
@@ -19,7 +19,7 @@ const Info = () => {
             className="hover:text-[#FA5252] duration-300 transition"
             href="tel:+1234567890"
           >
-            +1 4376776968
+            {props.data.attributes.Phone}
 
           </a>
         </>
@@ -31,7 +31,7 @@ const Info = () => {
       icon: <FaMapMarkerAlt />,
       iconColor: "text-[#6AB5B9] ",
       name: "Location",
-      meta: <>Ontario, Canada</>,
+      meta: <>{props.data.attributes.Location}</>,
     },
     {
       id: 3,
@@ -44,9 +44,9 @@ const Info = () => {
           {" "}
           <a
             className="hover:text-[#FA5252] duration-300 transition md:whitespace-nowrap"
-            href="mailto:ibthemes21@gmail.com"
+            href={props.data.attributes.Email}
           >
-            junaidmalikkakayzai@gmail.com
+            {props.data.attributes.Email}
           </a>
         </>
       ),
@@ -56,7 +56,7 @@ const Info = () => {
     //   icon: <FaCalendarAlt />,
     //   iconColor: "text-[#C17CEB]",
     //   name: "Birthday",
-    //   meta: <>March 12, 1982</>,
+    //   meta: <>{props.data.attributes.Birthday}</>,
     // },
   ];
 

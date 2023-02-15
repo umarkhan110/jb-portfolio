@@ -2,9 +2,9 @@ import Home from "./home";
 
 const MainRoot = ({
   sidebarData,
-  // aboutData,
-  // clientData,
-  // serviceData,
+  aboutData,
+  clientData,
+  serviceData,
   // skillData,
   // resumeData,
   // knowldegeData,
@@ -14,9 +14,9 @@ const MainRoot = ({
   return (
     <Home
     sidebarData={sidebarData}
-      // aboutData={aboutData}
-      // clientData={clientData}
-      // serviceData={serviceData}
+      aboutData={aboutData}
+      clientData={clientData}
+      serviceData={serviceData}
       // skillData={skillData}
       // resumeData={resumeData}
       // knowldegeData={knowldegeData}
@@ -33,12 +33,12 @@ export async function getStaticProps() {
   // const domain = "https://www.hautelogic.net";
   const res = await fetch(`${url}/api/home-page?populate=*`);
   const sidebarData = await res.json();
-  // const resAboutData = await fetch(`${url}/api/about?populate=*`);
-  // const aboutData = await resAboutData.json();
-  // const resServiceData = await fetch(`${url}/api/services?populate=*`);
-  // const serviceData = await resServiceData.json();
-  // const resClientData = await fetch(`${url}/api/clients?populate=*`);
-  // const clientData = await resClientData.json();
+  const resAboutData = await fetch(`${url}/api/about?populate=*`);
+  const aboutData = await resAboutData.json();
+  const resServiceData = await fetch(`${url}/api/services?populate=*`);
+  const serviceData = await resServiceData.json();
+  const resClientData = await fetch(`${url}/api/clients?populate=*`);
+  const clientData = await resClientData.json();
   // const resResumesData = await fetch(`${url}/api/resumes?populate=*`);
   // const resumeData = await resResumesData.json();
   // const resSkillData = await fetch(`${url}/api/skills?populate=*`);
@@ -56,9 +56,9 @@ export async function getStaticProps() {
   return {
     props: {
       sidebarData,
-      // aboutData,
-      // clientData,
-      // serviceData,
+      aboutData,
+      clientData,
+      serviceData,
       // skillData,
       // resumeData,
       // knowldegeData,
