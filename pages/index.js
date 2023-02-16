@@ -29,7 +29,7 @@ const MainRoot = ({
 export async function getStaticProps() {
   
   // Fetch data from external API
-  const url = "http://100.26.169.21:1337";
+  const url = "http://admin.junaidmalik.net:1337";
   // const domain = "https://www.hautelogic.net";
   const res = await fetch(`${url}/api/home-page?populate=*`);
   const sidebarData = await res.json();
