@@ -64,7 +64,7 @@ export async function getStaticProps() {
       // knowldegeData,
       // contactData,
     },
-   
+    revalidate: 30,
   };
 }
 

@@ -18,7 +18,8 @@ const Service = ({data}) => {
         >
           <Image
             className="w-10 h-10 object-contain  block"
-            src={`/images/icons/icon-${item.id}.svg`}
+            // src={`/images/icons/icon-${item.id}.svg`}
+            src={item.attributes.Icon.data.attributes.url}
             width={40}
             height={40}
             alt="icon"
