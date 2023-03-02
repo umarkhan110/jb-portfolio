@@ -15,7 +15,7 @@ const index = ({
   knowldegeData,
 }) => {
   return (
-    <section className="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
+    <section className="bg-gray dark:bg-homeTwoBg-dark min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
       <Seo pageTitle="Resume" />
       {/* End Head for Seo */}
 
@@ -104,6 +104,6 @@ export async function getStaticProps() {
       resumeData,
       knowldegeData,  
     },
-   
+    revalidate: 10,
   };
 }

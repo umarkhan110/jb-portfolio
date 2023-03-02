@@ -6,7 +6,9 @@ import Footer from "../components/footer/Footer";
 import BlogTwo from "../components/blog/BlogTwo";
 import Seo from "../components/seo/Seo";
 
-const index = () => {
+const index = ({
+  sidebarData
+}) => {
   return (
     <section className="bg-homeBg dark:bg-homeTwoBg-dark min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
       <Seo pageTitle="Blog" />
@@ -18,7 +20,7 @@ const index = () => {
       <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
         <div className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
           {/* profile sidebar */}
-          <SidebarInfo />
+          <SidebarInfo data={sidebarData}/>
         </div>
         <div className="col-span-12 lg:col-span-8">
           <HeaderNavigation />
@@ -35,7 +37,7 @@ const index = () => {
               </div>
               {/* End Portfolio */}
 
-              <Footer />
+              {/* <Footer /> */}
               {/* Common Footer call here */}
             </div>
             {/* End fade */}
@@ -49,3 +51,22 @@ const index = () => {
 };
 
 export default dynamic(() => Promise.resolve(index), { ssr: false });
+
+export async function getStaticProps() {
+  
+  // Fetch data from external API
+  // const url = "http://100.26.169.21:1337";
+  const url = "http://admin.junaidmalik.net:1337";
+  // const domain = "https://www.hautelogic.net";
+  const res = await fetch(`${url}/api/home-page?populate=*`);
+  const sidebarData = await res.json();
+
+
+  // Pass data to the page via props
+  return {
+    props: {
+      sidebarData 
+    },
+    revalidate: 10,
+  };
+}

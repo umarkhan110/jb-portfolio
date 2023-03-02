@@ -16,7 +16,7 @@ const index = ({
 }) => {
   // console.log(serviceData)
   return (
-    <section className="bg-homeBg min-h-screen bg-no-repeat bg-center bg-cover bg-fixed dark:bg-homeTwoBg-dark  md:pb-16 w-full">
+    <section className="bg-gray min-h-screen bg-no-repeat bg-center bg-cover bg-fixed dark:bg-homeTwoBg-dark  md:pb-16 w-full">
       <Seo pageTitle="Home" />
       {/* End Head for Seo */}
 
