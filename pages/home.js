@@ -16,15 +16,15 @@ const index = ({
 }) => {
   // console.log(serviceData)
   return (
-    <section className="bg-gray min-h-screen bg-no-repeat bg-center bg-cover bg-fixed dark:bg-homeTwoBg-dark  md:pb-16 w-full">
+    <section className="bg-gray min-h-screen bg-no-repeat bg-center bg-cover bg-fixed dark:bg-[#1D1D1D]  md:pb-16 w-full">
       <Seo pageTitle="Home" />
       {/* End Head for Seo */}
 
       <Header />
       {/* End header */}
 
-      <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
-        <div className="col-span-12 lg:col-span-4  lg:h-screen lg:sticky top-44">
+      <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[50px]">
+        <div className="col-span-12 lg:col-span-4  lg:h-screen lg:sticky top-48">
           <SidebarInfo data={sidebarData} />
         </div>
         {/* profile sidebar */}

@@ -1,6 +1,6 @@
 import Home from "./home";
-import Resume from "./resume"
 const MainRoot = ({ sidebarData, aboutData, clientData, serviceData }) => {
+ 
   return (
     <Home
       sidebarData={sidebarData}

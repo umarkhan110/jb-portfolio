@@ -20,6 +20,7 @@ const Header = () => {
         <Link href="/">
           <Image
             // className="h-[26px] lg:h-[32px]"
+            className="lg:hidden"
             width={153}
             height={26}
             priority
@@ -34,14 +35,14 @@ const Header = () => {
           {!menuOpen ? (
             <span
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:opacity-0 lg:invisible visible opacity-100  bg-[#ef4060] w-[40px] h-[40px] rounded-full flex justify-center cursor-pointer items-center text-white dark:text-white text-3xl ml-3 "
+              className="lg:opacity-0 lg:hidden visible opacity-100  bg-[#ef4060] w-[40px] h-[40px] rounded-full flex justify-center cursor-pointer items-center text-white dark:text-white text-3xl ml-3 "
             >
               <AiOutlineMenu />
             </span>
           ) : (
             <span
               onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:opacity-0 cursor-pointer lg:invisible visible opacity-100  bg-[#ef4060] w-[40px] h-[40px] rounded-full flex justify-center items-center text-white text-3xl ml-3 "
+              className="lg:opacity-0 cursor-pointer lg:hidden visible opacity-100  bg-[#ef4060] w-[40px] h-[40px] rounded-full flex justify-center items-center text-white text-3xl ml-3 "
             >
               <AiOutlineClose />
             </span>

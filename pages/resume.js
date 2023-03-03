@@ -8,24 +8,19 @@ import LineItem from "../components/Resume/LineItem";
 import Tag from "../components/tag/Tag";
 import Seo from "../components/seo/Seo";
 
-const index = ({
-  sidebarData,
-  skillData,
-  resumeData,
-  knowldegeData,
-}) => {
+const index = ({ sidebarData, skillData, resumeData, knowldegeData }) => {
   return (
-    <section className="bg-gray dark:bg-homeTwoBg-dark min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
+    <section className="bg-gray dark:bg-[#1D1D1D] min-h-screen  bg-no-repeat bg-center bg-cover bg-fixed  md:pb-16 w-full">
       <Seo pageTitle="Resume" />
       {/* End Head for Seo */}
 
       <Header />
       {/* End header */}
 
-      <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[220px]">
-        <div className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-44">
+      <div className="container grid grid-cols-12 md:gap-10 justify-between lg:mt-[50px]">
+        <div className="col-span-12 lg:col-span-4 hidden lg:block h-screen sticky top-48">
           {/* profile sidebar */}
-          <SidebarInfo data={sidebarData}/>
+          <SidebarInfo data={sidebarData} />
         </div>
         <div className="col-span-12 lg:col-span-8">
           <HeaderNavigation />
@@ -37,7 +32,7 @@ const index = ({
                   {/*Resume page title */}
                   <h2 className="after-effect after:left-44">Resume</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-6 gap-y-6 mt-[30px]">
-                    <ResumeCardTwo data={resumeData}/>
+                    <ResumeCardTwo data={resumeData} />
                     {/* resume items map */}
                   </div>
                 </div>
@@ -50,7 +45,7 @@ const index = ({
                     <h4 className="text-5xl dark:text-white font-medium mb-6">
                       Working Skills
                     </h4>
-                    <LineItem data={skillData}  />
+                    <LineItem data={skillData} />
                     {/* experience percent items */}
                   </div>
                   <div className="col-span-1">
@@ -59,7 +54,7 @@ const index = ({
                     </h4>
 
                     <div className="flex gap-x-3 gap-y-3 md:gap-y-3 md:gap-x-3 flex-wrap">
-                      <Tag data={knowldegeData}/>
+                      <Tag data={knowldegeData} />
                     </div>
                     {/* Knowledges items */}
                   </div>
@@ -83,7 +78,6 @@ const index = ({
 export default dynamic(() => Promise.resolve(index), { ssr: false });
 
 export async function getStaticProps() {
-  
   // Fetch data from external API
   const url = "http://admin.junaidmalik.net:1337";
   // const domain = "https://www.hautelogic.net";
@@ -102,7 +96,7 @@ export async function getStaticProps() {
       sidebarData,
       skillData,
       resumeData,
-      knowldegeData,  
+      knowldegeData,
     },
     revalidate: 10,
   };
