@@ -1,6 +1,7 @@
 import {
   FaDribbble,
   FaFacebookF,
+  FaGithub,
   FaLinkedinIn,
   FaTwitter,
 } from "react-icons/fa";
@@ -9,18 +10,24 @@ const Social = ({props}) => {
   const socialContent = [
     {
       id: 1,
+      link: `${props.data.attributes.Github_Link}`,
+      icon: <FaGithub />,
+      iconClass: "text-[#1C9CEA]",
+    },
+    {
+      id: 2,
       link: `${props.data.attributes.Linkedin_Link}`,
       icon: <FaLinkedinIn />,
       iconClass: "text-[#0072b1]",
     },
     {
-      id: 2,
+      id: 3,
       link: `${props.data.attributes.Facebook_Link}`,
       icon: <FaFacebookF />,
       iconClass: "text-[#1773EA]",
     },
     {
-      id: 3,
+      id: 4,
       link: `${props.data.attributes.Twitter_Link}`,
       icon: <FaTwitter />,
       iconClass: "text-[#1C9CEA]",
